@@ -19,7 +19,7 @@
         "psr/log": "^1.1",
         "predis/predis": "^1.1",
         "ramsey/uuid": "^3.8",
-        "vierbergenlars/php-semver": "^3.0"
+        "vierbergenlars/php-semver": "^4.0"
     },
     "suggest": {
         "ext-redis": "*"
