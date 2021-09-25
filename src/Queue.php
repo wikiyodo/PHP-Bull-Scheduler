@@ -63,8 +63,11 @@ class Queue {
     $this->keyPrefix = sprintf('%s:%s:', $this->prefix, $this->name);
     $this->logger->debug('Using key prefix: '.$this->keyPrefix);
 
+    var_dump($opts['redis']);
+    return;
+
     // Define Redis client
-    if (isset($opts['redis']) && $opts['redis'] instanceof Redis) {
+    if (isset($opts['redis']) && ($opts['redis'] instanceof Redis || is_array($opts['redis']))) {
       $this->redis = ($opts['redis'] instanceof Redis ? $opts['redis'] : new Redis($opts['redis']));
     } else {
       $this->redis = new Redis();
